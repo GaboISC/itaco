@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
-
+  resources :products
+  get 'products/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.

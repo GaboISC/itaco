@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 	def index
 		@product=Product.new
+		
 	end
 
 	def create
@@ -11,7 +12,9 @@ class ProductsController < ApplicationController
 		 	render :new
 		 end
 	end
-
+	def show
+		@products=Product.all
+	end
 
 private
 		def product_params

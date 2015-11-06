@@ -2,6 +2,10 @@
 
 one:
   Name: MyString
+  Price: 1
+  Stock: 1
 
 two:
   Name: MyString
+  Price: 1
+  Stock: 1

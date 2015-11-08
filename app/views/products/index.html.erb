@@ -1,1 +1,18 @@
-
+<h2>Products1</h2>
+<div id="products-catalog" class="panel panel-default">
+<div class="panel-heading"> Catálogo De Productos1 </div>
+	<table class="table">
+		<th>ID</th>
+		<th>Nombre</th>
+		<th>Precio</th>
+		<th>Action</th>
+		<% @products.each do |p| %>
+		<tr>
+		<td><%=	 p.id	%>	</td>
+		<td><%=	 p.name	%>	</td>
+		<td><%= p.price %>	</td>
+		<td><%= link_to "Add to cart ",add_product_path(p.id),data:{method: "ADD"} %></td>
+		</tr>
+		<% end %>
+	</table>
+</div>

@@ -19,5 +19,21 @@ Como usuario Cliente (logueado)
 * Puedo ver todos los productos agregados a mi carrito de compras
 * Puedo generar la orden de compra
 
-
+****************
+Product
+*id
+-name
+-price
+-stock
+--------
+orderProduct
+*id
+-product_id
+-order_id
+-quantity
+--------
+Order
+*id
+-user_id
+-total
 

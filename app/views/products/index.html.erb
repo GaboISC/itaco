@@ -11,7 +11,7 @@
 		<td><%=	 p.id	%>	</td>
 		<td><%=	 p.name	%>	</td>
 		<td><%= p.price %>	</td>
-		<td><%= link_to "Add to cart ",add_product_path(p.id),data:{method: "ADD"} %></td>
+		<td> <%= link_to "creas",cre_products_path('1') %></td>
 		</tr>
 		<% end %>
 	</table>

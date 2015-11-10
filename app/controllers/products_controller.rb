@@ -1,18 +1,26 @@
 class ProductsController < ApplicationController
 	def index
 		#@product=Product.new
-		#@products=Product.all
+		#if cookies[:campo].empty?
+		#	cookies[:campo]="sdd"
+		#else
+		#	cookies[:campo]+="mnbn"
+		#end
+  	
+		@products=Product.all
 	end
 
-	def create
-		 #@product=Product.new(product_params)
-		 #if @product.save
-		 #	redirect_to root_path
-		 #else
-		 #	render :new
-		 #end 
+	def cre 
+		@pr=params[:id]
+		cookies[:campo]+= @pr
 	end
+
+	def des_cookie
+		cookies.delete :campo
+	end
+
 	def show
+		
 		@products=Product.all
 	end
 
@@ -20,8 +28,9 @@ class ProductsController < ApplicationController
 		#Here code to add to shopping cart
 
 	end
-#private
-#		def product_params
-#		params.require(:product).permit(:name, :price, :stock)
-#		end
+
+private
+		def product_params
+		params.require(:product).permit(:id)
+		end
 end

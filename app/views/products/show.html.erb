@@ -11,7 +11,9 @@
 		<td><%=	p.id	%>	</td>
 		<td><%=	p.name	%>	</td>
 		<td><%= p.price %>	</td>
-		<td><%=link_to "Add to cart" ,product_path(p.id)%></td>
+
+		<td><%= form_for @x do |op| %>
+			<%= op.button  :submit , name: "quantity",value: "1", name: "product_id",value: p.id, %> <%end%>  </td>
 		</tr>
 		<% end %>
 	</table>

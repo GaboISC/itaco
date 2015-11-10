@@ -11,8 +11,10 @@
 		<td><%=	 p.id	%>	</td>
 		<td><%=	 p.name	%>	</td>
 		<td><%= p.price %>	</td>
-		<td> <%= link_to "creas",cre_products_path('1') %></td>
+		<td> <%= link_to "creas",cre_products_path(p.id) %></td>
 		</tr>
 		<% end %>
 	</table>
 </div>
+
+

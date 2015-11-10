@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
 
 	def cre 
 		@pr=params[:id]
-		cookies[:campo]+= @pr
+		cookies[:campo]+=","+@pr
 	end
 
 	def des_cookie

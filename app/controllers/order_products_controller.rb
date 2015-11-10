@@ -1,7 +1,7 @@
 class OrderProductsController < ApplicationController
 	def create
-		 @x=OrderProduct.new(product_params)
-		 if @x.save
+		 @OrderProduct=OrderProduct.new(product_params)
+		 if @OrderProduct.save
 		 	redirect_to root_path
 		 else
 		 	render :new
